@@ -41,5 +41,5 @@ Yes! You can help with development of the script or android app. Every change wi
 
 
 
-
+---
 This app is not sponsored, endorsed or affiliated with the Raspberry Pi Foundation. The use of the Raspberry Pi name and logo in this app is done under the Raspberry Pi trademark policy.
