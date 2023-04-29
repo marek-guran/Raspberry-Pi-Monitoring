@@ -37,3 +37,5 @@ For now the color scheme and design choice is... well not the best choice but wo
 
 # Can I help?
 Yes! You can help with development of the script or android app. Every change will be reviewed and decided if it will make to latest build.
+
+This app is not sponsored, endorsed or affiliated with the Raspberry Pi Foundation. The use of the Raspberry Pi name and logo in this app is done under the Raspberry Pi trademark policy.
