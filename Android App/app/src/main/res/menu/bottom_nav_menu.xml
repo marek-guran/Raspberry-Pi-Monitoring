@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_hw"
+        android:icon="@drawable/baseline_memory_24"
+        android:title="Hardvér" />
+
+    <item
+        android:id="@+id/navigation_pihole"
+        android:icon="@drawable/pi_hole"
+        android:title="Pi-hole" />
+
+    <item
+        android:id="@+id/navigation_nas"
+        android:icon="@drawable/round_storage_24"
+        android:title="NAS" />
+
+</menu>

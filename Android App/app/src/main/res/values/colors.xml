@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="raspberry">#B70F3F</color>
+    <color name="card1">#B70F3F</color>
+    <color name="card2">#BC214D</color>
+    <color name="text">#FFA3BE</color>
+
+    <color name="card1_icon">#FD4277</color>
+    <color name="card2_icon">#FB638E</color>
+
+
+    <color name="custom_background">#B83C60</color>
+    <color name="active_item">#FB5B8A</color>
+    <color name="item_color">#8A082D</color>
+    <color name="nav_menu_color">#DA3C69</color>
+
+
+    <color name="total_queries">#00BEED</color>
+    <color name="percentage_blocked">#F19A12</color>
+    <color name="queries_blocked">#DC4B39</color>
+    <color name="domains_on_adlist">#00A55A</color>
+
+    <color name="total_queries_img">#00A2CA</color>
+    <color name="percentage_blocked_img">#CE840F</color>
+    <color name="queries_blocked_img">#BB4031</color>
+    <color name="domains_on_adlist_img">#008C4D</color>
+</resources>
