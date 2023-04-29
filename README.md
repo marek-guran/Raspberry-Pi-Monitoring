@@ -9,7 +9,7 @@ I am planning to add NAS monitoring, for now it is marked as TBA in android app.
 1. Create firebase project with real time database
 2. In firebase open project settings - Service Accounts - Firebase Admin SDK - Select python - and click blue button to download json
 3. Put this json into folder where you have stored the python file
-4. Open python file (dont know why did i name it hw.py but it is what it is) and change this line: cred = credentials.Certificate("/home/pi/python/firebase_credential.json") with your own location where you have stored the json you downloaded
+4. Open python file and change this line: cred = credentials.Certificate("/home/pi/python/firebase_credential.json") with your own location where you have stored the json you downloaded
 5. Go back to Service Accounts, open database secrets and copy and paste secret into apiKey = "YOUR DATABASE SECRET"
 6. Open your firebase database and copy reference url (that one that has icon to copy next to it) and put it in databaseURL = "YOUR DATABASE URL"
 7. Open Pi hole web interface, go to settings - API - show api token and paste this token inside of this line after auth=...: pihole_data = requests.get("http://localhost/admin/api.php?summaryRaw&auth=YOUR_API_KEY").json()
