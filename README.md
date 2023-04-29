@@ -38,8 +38,10 @@ For now the color scheme and design choice is... well not the best choice but wo
 # Can I help?
 Yes! You can help with development of the script or android app. Every change will be reviewed and decided if it will make to latest build.
 
+## Contributors
 
+[![contributors](https://contrib.rocks/image?repo=marek-guran/Raspberry-Pi-Monitoring)](https://github.com/marek-guran/Raspberry-Pi-Monitoring/graphs/contributors)
 
 
 ---
-This app is not sponsored, endorsed or affiliated with the Raspberry Pi Foundation. The use of the Raspberry Pi name and logo in this app is done under the Raspberry Pi trademark policy.
+This repository is not sponsored, endorsed or affiliated with the Raspberry Pi Foundation. The use of the Raspberry Pi name and logo in this repository is done under the Raspberry Pi trademark policy.
