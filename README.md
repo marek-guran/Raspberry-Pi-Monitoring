@@ -23,7 +23,17 @@ I am planning to add NAS monitoring, for now it is marked as TBA in android app.
 NOTE: The python script is meant to be run on device that has in it running Pi Hole, you will need to modify the localhost to IP on your local network with pi hole if you are not gonna run it on that particular device.
 
 # Current state images
-TBA
+For now the color scheme and design choice is... well not the best choice but works for now 😅 App has dark and light color scheme. For now it is based only by device settings.
+<details> 
+   <summary>Show</summary> 
+<img src="https://user-images.githubusercontent.com/26904790/235303862-2d6c2898-2efb-43bb-8952-deb4ec70cd44.png" width = "200px"> <img src="https://user-images.githubusercontent.com/26904790/235303866-58e39241-9350-4ea9-bc94-1f01f6308452.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235303868-f820b8dd-1f22-4f4b-9146-47a2014d896a.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235303870-0837cf94-37e7-4ce2-b4d0-6d75d6e97ebb.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235303872-f7baf8e7-d4e7-49d9-bda1-361b8ceb1bef.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235303873-59ff1bce-1bab-43ea-b961-3a7aeb2ac0ea.png" width = "200px">
+   </details>
+
+
 
 # Can I help?
 Yes! You can help with development of the script or android app. Every change will be reviewed and decided if it will make to latest build.
