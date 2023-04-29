@@ -16,7 +16,7 @@ I am planning to add NAS monitoring, for now it is marked as TBA in android app.
 8. Save and try running it, if your firebase database gets data, it works and we can move to android app
 9. Download android studio
 10. Open android studio and open in it folder with android app project
-11. Rename texts to your language, for now you will need to open layout by layout since i did not yet implement strings
+11. Rename texts to your language, for now you will need to open layout by layout since i did not yet implement strings and also in HardwareFragment.kt
 12. In android studio select in top bar: Tools - Firebase - Realtime Database - Get started KOTLIN - login, pick your project and it should be done
 13. To create android app you have 2 options: 1. On top bar there is Build - build bunde/apk - build apk, once this is done you click locate on pop up menu that will show up in bottom right corner and manually install this app. 2. Second option is opening developer options, enable usb debugging and plugging in phone into PC, on phone enable pop up if you get one and in android studio click green arrow Run app and you are done
 
