@@ -1,7 +1,7 @@
 # What is this?
 This is my small project which basically does this:
 
-Python program running on Raspberry Pi is sending data about CPU (usage, temperature), RAM (usage), SD Card (free storage) and Pi Hole data (Latest 24 hours, basically what is on dashboard when you open web interface) to Firebase from which is downloading these data the android app.
+Python program running on Raspberry Pi is sending data about CPU, RAM, SD Card and Pi Hole data (Latest 24 hours, basically what is on dashboard when you open web interface) to Firebase from which is downloading these data the android app.
 
 I am planning to add NAS monitoring, for now it is marked as TBA in android app.
 
