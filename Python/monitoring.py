@@ -20,7 +20,7 @@ firebase_admin.initialize_app(cred, firebase_config)
 
 # Get system information
 cputemp = os.popen('vcgencmd measure_temp').readline().replace("temp=","").replace("'C\n","")
-cpuusage = str(psutil.cpu_percent())
+cpuusage = "{:.2f}".format(psutil.cpu_percent(interval=10))
 ramusage = str(psutil.virtual_memory().percent)
 available_storage_bytes = psutil.disk_usage('/').free
 available_storage_gb = str(round(available_storage_bytes / (1024 ** 3), 2))
