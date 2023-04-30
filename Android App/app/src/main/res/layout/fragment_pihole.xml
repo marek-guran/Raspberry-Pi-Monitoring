@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dáta za posledných 24 hodín"
+            android:text="@string/data_last_24"
             android:textStyle="bold"
             android:textColor="@color/text"
             android:textAlignment="center"
@@ -48,15 +48,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Skontrolovaných stránok"
+                    android:text="@string/total_queries"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/total_queries"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bez pripojenia"
+                    android:text="@string/no_connection"
                     android:textColor="@color/white"
                     android:textSize="34sp"
                     android:textStyle="bold" />
@@ -96,17 +96,17 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zablokovaných reklám"
+                    android:text="@string/queries_blocked"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/total_blocked"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bez pripojenia"
+                    android:text="@string/no_connection"
                     android:textColor="@color/white"
                     android:textSize="34sp"
                     android:textStyle="bold" />
@@ -149,17 +149,17 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zablokované reklamy v percentách"
+                    android:text="@string/percentage_blocked"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/total_queries_percent"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bez pripojenia"
+                    android:text="@string/no_connection"
                     android:textColor="@color/white"
                     android:textSize="34sp"
                     android:textStyle="bold" />
@@ -200,17 +200,17 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Domén na reklamnom liste"
+                    android:text="@string/domains_on_adlists"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/total_ads_list"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bez pripojenia"
+                    android:text="@string/no_connection"
                     android:textColor="@color/white"
                     android:textSize="34sp"
                     android:textStyle="bold" />

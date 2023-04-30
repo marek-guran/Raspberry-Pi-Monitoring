@@ -9,15 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.*
 import com.marekguran.raspberrypi.databinding.FragmentHardwareBinding
+import com.marekguran.raspberrypi.R
 
 class HardwareFragment : Fragment() {
 
     private var _binding: FragmentHardwareBinding? = null
     private lateinit var database: DatabaseReference
-    private lateinit var cpuUsageListener: ValueEventListener
-    private lateinit var cpuTempListener: ValueEventListener
-    private lateinit var ramUsageListener: ValueEventListener
-    private lateinit var storageUsageListener: ValueEventListener
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -40,19 +37,39 @@ class HardwareFragment : Fragment() {
         val cpuTempTextView: TextView = binding.cpuTemp
         val ramUsageTextView: TextView = binding.ramUsage
         val storageUsageTextView: TextView = binding.storageUsage
+        val cpuClockTextView: TextView = binding.cpuClock
+        val cpuVoltageTextView: TextView = binding.cpuVoltage
+        val gpuClockTextView: TextView = binding.gpuClock
+        val gpuTempTextView: TextView = binding.gpuTemp
+        val modelTextView: TextView = binding.model
+
+        val modelListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val model = dataSnapshot.getValue(String::class.java)
+                if (model != null) {
+                    modelTextView.text = model
+                } else {
+                    modelTextView.text = getString(R.string.model_error)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                modelTextView.text = getString(R.string.model_error)
+            }
+        }
 
         val cpuUsageListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val cpuUsage = dataSnapshot.getValue(String::class.java)
                 if (cpuUsage != null) {
-                    cpuUsageTextView.text = "Využitie: " + cpuUsage + " %"
+                    cpuUsageTextView.text = getString(R.string.cpu_usage)+ " " + cpuUsage + " %"
                 } else {
-                    cpuUsageTextView.text = "Využitie: chyba"
+                    cpuUsageTextView.text = getString(R.string.usage_error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                cpuUsageTextView.text = "Využitie: chyba"
+                cpuUsageTextView.text = getString(R.string.usage_error)
             }
         }
 
@@ -60,14 +77,74 @@ class HardwareFragment : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val cpuTemp = dataSnapshot.getValue(String::class.java)
                 if (cpuTemp != null) {
-                    cpuTempTextView.text = "Teplota: " + cpuTemp + " ℃"
+                    cpuTempTextView.text = getString(R.string.cpu_temp)+ " " + cpuTemp + " ℃"
                 } else {
-                    cpuTempTextView.text = "Teplota: chyba"
+                    cpuTempTextView.text = getString(R.string.temperature_error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                cpuTempTextView.text = "Teplota: chyba"
+                cpuTempTextView.text = getString(R.string.temperature_error)
+            }
+        }
+
+        val cpuClockListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val cpuClock = dataSnapshot.getValue(String::class.java)
+                if (cpuClock != null) {
+                    cpuClockTextView.text = getString(R.string.cpu_freq)+ " " + cpuClock + " MHz"
+                } else {
+                    cpuClockTextView.text = getString(R.string.fequency_error)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                cpuClockTextView.text = getString(R.string.fequency_error)
+            }
+        }
+
+        val cpuVoltageListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val cpuVoltage = dataSnapshot.getValue(String::class.java)
+                if (cpuVoltage != null) {
+                    cpuVoltageTextView.text = getString(R.string.cpu_voltage)+ " " + cpuVoltage + " V"
+                } else {
+                    cpuVoltageTextView.text = getString(R.string.voltage_error)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                cpuVoltageTextView.text = getString(R.string.voltage_error)
+            }
+        }
+
+        val gpuClockListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val gpuClock = dataSnapshot.getValue(String::class.java)
+                if (gpuClock != null) {
+                    gpuClockTextView.text = getString(R.string.gpu_freq)+ " " + gpuClock + " MHz"
+                } else {
+                    gpuClockTextView.text = getString(R.string.fequency_error)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                gpuClockTextView.text = getString(R.string.fequency_error)
+            }
+        }
+
+        val gpuTempListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val gpuTemp = dataSnapshot.getValue(String::class.java)
+                if (gpuTemp != null) {
+                    gpuTempTextView.text = getString(R.string.gpu_temp)+ " " + gpuTemp + " ℃"
+                } else {
+                    gpuTempTextView.text = getString(R.string.temperature_error)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                cpuUsageTextView.text = getString(R.string.temperature_error)
             }
         }
 
@@ -75,14 +152,14 @@ class HardwareFragment : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val ramUsage = dataSnapshot.getValue(String::class.java)
                 if (ramUsage != null) {
-                    ramUsageTextView.text = "Využitie: " + ramUsage + " %"
+                    ramUsageTextView.text = getString(R.string.ram_usage)+ " " + ramUsage + " %"
                 } else {
-                    ramUsageTextView.text = "Využitie: chyba"
+                    ramUsageTextView.text = getString(R.string.usage_error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                ramUsageTextView.text = "Využitie: chyba"
+                ramUsageTextView.text = getString(R.string.usage_error)
             }
         }
 
@@ -90,14 +167,14 @@ class HardwareFragment : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val storageUsage = dataSnapshot.getValue(String::class.java)
                 if (storageUsage != null) {
-                    storageUsageTextView.text = "Voľné: " + storageUsage + " GB"
+                    storageUsageTextView.text = getString(R.string.free_storage)+ " " + storageUsage + " GB"
                 } else {
-                    storageUsageTextView.text = "Voľné: chyba"
+                    storageUsageTextView.text = getString(R.string.storage_error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                storageUsageTextView.text = "Voľné: chyba"
+                storageUsageTextView.text = getString(R.string.storage_error)
             }
         }
 
@@ -105,17 +182,17 @@ class HardwareFragment : Fragment() {
         database.child("cputemp").addValueEventListener(cpuTempListener)
         database.child("ramusage").addValueEventListener(ramUsageListener)
         database.child("avaiblestorage").addValueEventListener(storageUsageListener)
+        database.child("cpu_clock_freq").addValueEventListener(cpuClockListener)
+        database.child("cpu_voltage").addValueEventListener(cpuVoltageListener)
+        database.child("gpu_clock_freq").addValueEventListener(gpuClockListener)
+        database.child("gpu_temp").addValueEventListener(gpuTempListener)
+        database.child("model").addValueEventListener(modelListener)
 
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Remove the listeners to avoid memory leaks - crashing
-        //database.child("cpuusage").removeEventListener(cpuUsageListener)
-        //database.child("cputemp").removeEventListener(cpuTempListener)
-        //database.child("ramusage").removeEventListener(ramUsageListener)
-        //database.child("avaiblestorage").removeEventListener(storageUsageListener)
         _binding = null
     }
 }

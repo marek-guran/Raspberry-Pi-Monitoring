@@ -4,16 +4,16 @@
     <item
         android:id="@+id/navigation_hw"
         android:icon="@drawable/baseline_memory_24"
-        android:title="Hardvér" />
+        android:title="@string/hardware" />
 
     <item
         android:id="@+id/navigation_pihole"
         android:icon="@drawable/pi_hole"
-        android:title="Pi-hole" />
+        android:title="@string/pi_hole" />
 
     <item
         android:id="@+id/navigation_nas"
         android:icon="@drawable/round_storage_24"
-        android:title="NAS" />
+        android:title="@string/nas" />
 
 </menu>
