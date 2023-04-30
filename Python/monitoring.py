@@ -26,8 +26,8 @@ available_storage_bytes = psutil.disk_usage('/').free
 available_storage_gb = str(round(available_storage_bytes / (1024 ** 3), 2))
 gpu_temp = os.popen('vcgencmd measure_temp').readline().replace("temp=","").replace("'C\n","")
 cpu_voltage = os.popen('vcgencmd measure_volts').readline().replace("volt=","").replace("V\n","")
-cpu_clock_freq = os.popen('vcgencmd measure_clock arm').readline().replace("frequency(48)=","").strip()
-gpu_clock_freq = os.popen('vcgencmd measure_clock core').readline().replace("frequency(1)=","").strip()
+cpu_clock_freq = str(int(os.popen('vcgencmd measure_clock arm').readline().replace("frequency(48)=","").strip()) // 1000000)
+gpu_clock_freq = str(int(os.popen('vcgencmd measure_clock core').readline().replace("frequency(1)=","").strip()) // 1000000)
 
 # Get Raspberry Pi model information
 model = os.popen('cat /proc/device-tree/model').readline().strip()
