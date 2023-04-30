@@ -22,6 +22,8 @@ I am planning to add NAS monitoring, for now it is marked as TBA in android app.
 
 NOTE: The python script is meant to be run on device that has in it running Pi Hole, you will need to modify the localhost to IP on your local network with pi hole if you are not gonna run it on that particular device.
 
+Warning: Model of your Raspberry Pi device in python program willl work only if you are using Raspbian OS or other Raspberry Pi OS distribution. Otherwise python program will be crashing, you can remove this line and put there manually your model or just anything you want.
+
 # Current state images
 For now the color scheme and design choice is... well not the best choice but works for now 😅 App has dark and light color scheme. For now it is based only by device settings.
 <details> 
