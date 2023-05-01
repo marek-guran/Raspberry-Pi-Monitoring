@@ -16,7 +16,7 @@ I don't like opening my network to outside world... This way I can monitor every
 5. Go back to Service Accounts, open database secrets and copy and paste secret into apiKey = "YOUR DATABASE SECRET"
 6. Open your firebase database and copy reference url (that one that has icon to copy next to it) and put it in databaseURL = "YOUR DATABASE URL"
 7. Open Pi hole web interface, go to settings - API - show api token and paste this token inside of this line after auth=...: pihole_data = requests.get("http://localhost/admin/api.php?summaryRaw&auth=YOUR_API_KEY").json()
-8. Save and try running it, if your firebase database gets data, it works and we can move to android app (if you will want to execute the python code automatically every few minutes and on boot, I recommend you doing that by cron job) Example how to setup cron job: Open terminal and execute command: ```crontab-e``` (pick your editor) and put at the end of file: 
+8. Save and try running it, if your firebase database gets data, it works and we can move to android app (if you will want to execute the python code automatically every few minutes and on boot, I recommend you doing that by cron job) Example how to setup cron job: Open terminal and execute command: ```crontab-e``` (pick your editor) and put at the end of file (put your location of script instead of mine): 
 ```
 @reboot python3 /home/pi/python/monitoring.py
 * * * * * python3 /home/pi/python/monitoring.py
