@@ -51,9 +51,9 @@ ref.update({
         'gpu_clock_freq': gpu_clock_freq
     },
     'pihole': {
-        'domainsbeingblocked': pihole_data['domains_being_blocked'],
-        'dnsqueriestoday': pihole_data['dns_queries_today'],
-        'adsblockedtoday': pihole_data['ads_blocked_today'],
-        'adspercentagetoday': ads_percentage_today
+        'domainsbeingblocked': str(pihole_data['domains_being_blocked']),
+        'dnsqueriestoday': str(pihole_data['dns_queries_today']),
+        'adsblockedtoday': str(pihole_data['ads_blocked_today']),
+        'adspercentagetoday': str(ads_percentage_today)
     }
 })
