@@ -1,9 +1,12 @@
 # What is this?
 This is my small project which basically does this:
 
-Python program running on Raspberry Pi is sending data about CPU, GPU, RAM, SD Card and Pi Hole data (Latest 24 hours, basically what is on dashboard when you open web interface) to Firebase from which is downloading these data the android app.
+Python program running on Raspberry Pi is sending data about CPU, GPU, RAM, SD Card,model of your Raspberry Pi and Pi Hole data (Latest 24 hours, basically what is on dashboard when you open web interface) to Firebase from which is downloading these data the android app.
 
 I am planning to add NAS monitoring, for now it is marked as TBA in android app.
+
+# But why?
+I don't like opening my network to outside world... This way I can monitor everything I need and also hardware stats with just one single app no matter where I am.
 
 # How do I get started to make the app work?
 1. Create firebase project with real time database
