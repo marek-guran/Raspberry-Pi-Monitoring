@@ -42,7 +42,7 @@ Warning: Model of your Raspberry Pi device in python program willl work only if 
 
 # If you are gonna use management.py
 1. As previus edit the python program and put there your firebase url and database secret
-2. Run in terminal command: ```sudo crontab -e```
+2. Run in terminal command: ```sudo crontab -e``` (You will not see there your changes for monitoring.py as it does not run as SUDO, it will still work as before)
 3. Add this line at the end of file: ```@reboot sleep 30 && sudo python3 /home/pi/python/management.py >> /home/pi/python/management.log 2>&1``` (This will make it run as sudo user on each boot and start after 30 seconds to ensure that everything is booted up correctly, the >> means that it will save logs into folder with script just in case it wont work. So if it wont update for you firebase database or execute correctly commands, you will be able to see by nano or any other text editor what went wrong)
 4. Reboot Raspberry Pi by ```sudo reboot```
 5. Check if it works (it should create management node in your firebase database if you dont have it). If it did not work check errors by nano management.log
