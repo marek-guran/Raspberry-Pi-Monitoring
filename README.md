@@ -50,14 +50,14 @@ Warning: Model of your Raspberry Pi device in python program willl work only if 
 ##### Reminder: Android app with these changes is not yet complete.
 
 # Current state images
-For now the color scheme and design choice is... well not the best choice but works for now 😅 App has dark and light color scheme. For now it is based only by device settings.
+For now the color scheme and design choice is... well not the best choice but works for now 😅
 <details> 
    <summary>Show</summary> 
-<img src="https://user-images.githubusercontent.com/26904790/235367912-683662e5-bda0-45bd-adf2-7572b9c07854.png" width = "200px"> <img src="https://user-images.githubusercontent.com/26904790/235367913-babc4aba-0ae4-4c87-9a71-25c34a60fb01.png" width = "200px">
-<img src="https://user-images.githubusercontent.com/26904790/235367914-28886dcb-b1c1-4c22-a5c7-d73fba26da91.png" width = "200px">
-<img src="https://user-images.githubusercontent.com/26904790/235367915-b76e4dbd-b1ae-4751-a2aa-d1eebdad5ade.png" width = "200px">
-<img src="https://user-images.githubusercontent.com/26904790/235367916-671676e8-18a0-478e-988f-541d345ec1cf.png" width = "200px">
-<img src="https://user-images.githubusercontent.com/26904790/235367917-720e167b-2667-44b8-9e3e-215128d5e305.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235688440-0a184989-d3a9-45c3-88ed-04c264356b0d.png" width = "200px"> <img src="https://user-images.githubusercontent.com/26904790/235688448-b684ff3f-7502-4bfc-8d58-f79c1071611e.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235688450-6ce5be56-3e7a-4020-9b42-a12fb086c73a.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235688452-98f2a1a1-6481-4813-b3bd-e40bdb9acf4b.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235688455-8d5ee0ef-74aa-49b7-86bb-e61112c8bf6d.png" width = "200px">
+<img src="https://user-images.githubusercontent.com/26904790/235688457-14c695ee-9ded-4025-8edb-7ae1d38a5609.png" width = "200px">
    </details>
 
 # Can I help?
