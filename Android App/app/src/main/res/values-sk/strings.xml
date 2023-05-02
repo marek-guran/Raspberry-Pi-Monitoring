@@ -53,4 +53,24 @@
     <string name="hardware">Hardvér</string>
     <string name="pi_hole">Pi-hole</string>
     <string name="nas">NAS</string>
+
+    <string name="reboot">Reštartovať</string>
+    <string name="shutdown">Vypnúť</string>
+    <string name="restart_text">Naozaj si prajete reštartovať?</string>
+    <string name="shutdown_title">Naozaj si prajete vypnúť?</string>
+    <string name="shutdown_description">Budete musieť manuálne zapnúť zariadenie aby sa znova spustilo.</string>
+    <string name="yes">Áno</string>
+    <string name="no">Nie</string>
+
+
+    <string name="update_gravity_list">Aktualizovať AdLists</string>
+    <string name="restart_pihole">Reštartovať Pi-hole</string>
+    <string name="update_adlists_question">Aktualizovať AdLists?</string>
+    <string name="restart_pihole_question">Naozaj si prajete reštartovať Pi-hole?</string>
+
+
+    <string name="settings">Nastavenia</string>
+    <string name="updates">Aktualizácie</string>
+    <string name="open_link">Otvoriť</string>
+    <string name="version">Verzia:</string>
 </resources>

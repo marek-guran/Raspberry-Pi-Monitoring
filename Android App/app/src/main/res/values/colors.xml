@@ -9,15 +9,15 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="raspberry">#B70F3F</color>
-    <color name="card1">#B70F3F</color>
-    <color name="card2">#BC214D</color>
-    <color name="text">#FFA3BE</color>
+    <color name="card1">#BD2A54</color>
+    <color name="card2">#C34166</color>
+    <color name="text">#FABDCF</color>
 
-    <color name="card1_icon">#FD4277</color>
-    <color name="card2_icon">#FB638E</color>
+    <color name="card1_icon">#FD5F8C</color>
+    <color name="card2_icon">#FD90AF</color>
 
 
-    <color name="custom_background">#B83C60</color>
+    <color name="custom_background">#C8738C</color>
     <color name="active_item">#FB5B8A</color>
     <color name="item_color">#8A082D</color>
     <color name="nav_menu_color">#DA3C69</color>

@@ -1,10 +1,14 @@
 package com.marekguran.raspberrypi.ui.hardware
 
+import android.app.AlertDialog
 import android.os.Bundle
+import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.*
@@ -31,7 +35,6 @@ class HardwareFragment : Fragment() {
 
         // Initialize Firebase database
         database = FirebaseDatabase.getInstance().reference.child("hw")
-
         // Set up listeners to update TextViews in real-time
         val cpuUsageTextView: TextView = binding.cpuUsage
         val cpuTempTextView: TextView = binding.cpuTemp
@@ -187,6 +190,54 @@ class HardwareFragment : Fragment() {
         database.child("gpu_clock_freq").addValueEventListener(gpuClockListener)
         database.child("gpu_temp").addValueEventListener(gpuTempListener)
         database.child("model").addValueEventListener(modelListener)
+
+        binding!!.rebootPi.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme)
+            val inflater: LayoutInflater = layoutInflater
+            val dialogLayout: View = inflater.inflate(R.layout.reboot_pi, null)
+            dialogLayout.setBackgroundResource(android.R.color.transparent)
+            builder.setView(dialogLayout)
+            builder.setPositiveButton(getString(R.string.yes)) { dialogInterface, i ->
+                database = FirebaseDatabase.getInstance().reference.child("management").child("reboot")
+                database.setValue("1")
+                dialogInterface.dismiss() // Close the Alert Dialog
+            }
+            builder.setNegativeButton(getString(R.string.no)) { dialogInterface, i ->
+                dialogInterface.dismiss() // Close the Alert Dialog
+            }
+            val alertDialog = builder.show()
+            val positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)
+            positiveButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.text))
+            val negativeButton = alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE)
+            negativeButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.text))
+            val textSize = 20f // Set the text size to 20sp
+            positiveButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize)
+            negativeButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize)
+        }
+
+        binding!!.shutdownPi.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext(), R.style.MyAlertDialogTheme)
+            val inflater: LayoutInflater = layoutInflater
+            val dialogLayout: View = inflater.inflate(R.layout.shutdown_pi, null)
+            dialogLayout.setBackgroundResource(android.R.color.transparent)
+            builder.setView(dialogLayout)
+            builder.setPositiveButton(getString(R.string.yes)) { dialogInterface, i ->
+                database = FirebaseDatabase.getInstance().reference.child("management").child("shutdown")
+                database.setValue("1")
+                dialogInterface.dismiss() // Close the Alert Dialog
+            }
+            builder.setNegativeButton(getString(R.string.no)) { dialogInterface, i ->
+                dialogInterface.dismiss() // Close the Alert Dialog
+            }
+            val alertDialog = builder.show()
+            val positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)
+            positiveButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.text))
+            val negativeButton = alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE)
+            negativeButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.text))
+            val textSize = 20f // Set the text size to 20sp
+            positiveButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize)
+            negativeButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize)
+        }
 
         return root
     }

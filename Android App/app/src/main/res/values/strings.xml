@@ -54,4 +54,25 @@
     <string name="hardware">Hardware</string>
     <string name="pi_hole">Pi-hole</string>
     <string name="nas">NAS</string>
+
+
+    <string name="reboot">Reboot</string>
+    <string name="shutdown">Shutdown</string>
+    <string name="restart_text">Do you really wish to restart?</string>
+    <string name="shutdown_title">Do you really wish to shutdown?</string>
+    <string name="shutdown_description">You will have to manually start the device in order to make it boot again.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <string name="update_gravity_list">Update AdLists</string>
+    <string name="restart_pihole">Restart Pi-hole</string>
+    <string name="update_adlists_question">Update AdLists?</string>
+    <string name="restart_pihole_question">Do you really wish to restart Pi-hole?</string>
+
+
+    <string name="settings">Settings</string>
+    <string name="updates">Updates</string>
+    <string name="open_link">Open</string>
+    <string name="version">Version:</string>
 </resources>

@@ -12,8 +12,8 @@
         android:title="@string/pi_hole" />
 
     <item
-        android:id="@+id/navigation_nas"
-        android:icon="@drawable/round_storage_24"
-        android:title="@string/nas" />
+        android:id="@+id/navigation_updates"
+        android:icon="@drawable/round_update_24"
+        android:title="@string/updates" />
 
 </menu>
