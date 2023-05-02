@@ -8,6 +8,13 @@ I am planning to add NAS monitoring, for now it is marked as TBA in android app.
 # But why?
 I don't like opening my network to outside world... This way I can monitor everything I need and also hardware stats with just one single app no matter where I am.
 
+# Install python packages:
+```
+sudo pip3 install psutil firebase_admin requests (if you are gonna use management.py)
+pip3 install psutil firebase_admin requests (if you are not gonna use management.py)
+```
+The sudo version needs to install these packages for sudo user so it can be executed on each boot as sudo since it reboots, shutdowns Raspberry Pi, restarts PiHole service and updates gravity list.
+
 # How do I get started to make the app work?
 1. Create firebase project with real time database
 2. In firebase open project settings - Service Accounts - Firebase Admin SDK - Select python - and click blue button to download json
@@ -32,6 +39,15 @@ This will make python script start on boot and and 5 * will make it start automa
 NOTE: The python script is meant to be run on device that has in it running Pi Hole, you will need to modify the localhost to IP on your local network with pi hole if you are not gonna run it on that particular device.
 
 Warning: Model of your Raspberry Pi device in python program willl work only if you are using Raspbian OS or other Raspberry Pi OS distribution. Otherwise python program will be crashing, you can remove this line and put there manually your model or just anything you want.
+
+# If you are gonna use management.py
+1. As previus edit the python program and put there your firebase url and database secret
+2. Run in terminal command: ```sudo crontab -e```
+3. Add this line at the end of file: ```@reboot sleep 30 && sudo python3 /home/pi/python/management.py >> /home/pi/python/management.log 2>&1``` (This will make it run as sudo user on each boot and start after 30 seconds to ensure that everything is booted up correctly, the >> means that it will save logs into folder with script just in case it wont work. So if it wont update for you firebase database or execute correctly commands, you will be able to see by nano or any other text editor what went wrong)
+4. Reboot Raspberry Pi by ```sudo reboot```
+5. Check if it works (it should create management node in your firebase database if you dont have it). If it did not work check errors by nano management.log
+
+##### Reminder: Android app with these changes is not yet complete.
 
 # Current state images
 For now the color scheme and design choice is... well not the best choice but works for now 😅 App has dark and light color scheme. For now it is based only by device settings.
