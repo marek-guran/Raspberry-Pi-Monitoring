@@ -74,4 +74,6 @@
     <string name="updates">Updates</string>
     <string name="open_link">Open</string>
     <string name="version">Version:</string>
+
+    <string name="error">error</string>
 </resources>

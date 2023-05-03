@@ -38,10 +38,10 @@ class PiholeFragment : Fragment() {
 
         database = FirebaseDatabase.getInstance().reference.child("pihole")
 
-        val totalqueriesTextView: TextView = binding.totalQueries
-        val totalblockedTextView: TextView = binding.totalBlocked
-        val totalqueriespercentTextView: TextView = binding.totalQueriesPercent
-        val totaladslistTextView: TextView = binding.totalAdsList
+        val totalqueriesTextView: TextView = binding!!.totalQueries
+        val totalblockedTextView: TextView = binding!!.totalBlocked
+        val totalqueriespercentTextView: TextView = binding!!.totalQueriesPercent
+        val totaladslistTextView: TextView = binding!!.totalAdsList
 
         val totalqueriesListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -49,12 +49,12 @@ class PiholeFragment : Fragment() {
                 if (dnsqueriestoday != null) {
                     totalqueriesTextView.text = dnsqueriestoday
                 } else {
-                    totalqueriesTextView.text = "chyba"
+                    totalqueriesTextView.text = getString(R.string.error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                totalqueriesTextView.text = "chyba"
+                totalqueriesTextView.text = getString(R.string.error)
             }
         }
 
@@ -64,12 +64,12 @@ class PiholeFragment : Fragment() {
                 if (adsblockedtoday != null) {
                     totalblockedTextView.text = adsblockedtoday
                 } else {
-                    totalblockedTextView.text = "chyba"
+                    totalblockedTextView.text = getString(R.string.error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                totalblockedTextView.text = "chyba"
+                totalblockedTextView.text = getString(R.string.error)
             }
         }
 
@@ -79,12 +79,12 @@ class PiholeFragment : Fragment() {
                 if (adspercentagetoday != null) {
                     totalqueriespercentTextView.text = adspercentagetoday + " %"
                 } else {
-                    totalqueriespercentTextView.text = "chyba"
+                    totalqueriespercentTextView.text = getString(R.string.error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                totalqueriespercentTextView.text = "chyba"
+                totalqueriespercentTextView.text = getString(R.string.error)
             }
         }
 
@@ -94,12 +94,12 @@ class PiholeFragment : Fragment() {
                 if (domainsbeingblocked != null) {
                     totaladslistTextView.text = domainsbeingblocked
                 } else {
-                    totaladslistTextView.text = "chyba"
+                    totaladslistTextView.text = getString(R.string.error)
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                totaladslistTextView.text = "chyba"
+                totaladslistTextView.text = getString(R.string.error)
             }
         }
 

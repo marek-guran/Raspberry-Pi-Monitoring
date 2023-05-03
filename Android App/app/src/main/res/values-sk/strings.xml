@@ -73,4 +73,6 @@
     <string name="updates">Aktualizácie</string>
     <string name="open_link">Otvoriť</string>
     <string name="version">Verzia:</string>
+
+    <string name="error">chyba</string>
 </resources>

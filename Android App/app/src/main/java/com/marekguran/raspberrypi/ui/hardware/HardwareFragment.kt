@@ -36,15 +36,15 @@ class HardwareFragment : Fragment() {
         // Initialize Firebase database
         database = FirebaseDatabase.getInstance().reference.child("hw")
         // Set up listeners to update TextViews in real-time
-        val cpuUsageTextView: TextView = binding.cpuUsage
-        val cpuTempTextView: TextView = binding.cpuTemp
-        val ramUsageTextView: TextView = binding.ramUsage
-        val storageUsageTextView: TextView = binding.storageUsage
-        val cpuClockTextView: TextView = binding.cpuClock
-        val cpuVoltageTextView: TextView = binding.cpuVoltage
-        val gpuClockTextView: TextView = binding.gpuClock
-        val gpuTempTextView: TextView = binding.gpuTemp
-        val modelTextView: TextView = binding.model
+        val cpuUsageTextView: TextView = binding!!.cpuUsage
+        val cpuTempTextView: TextView = binding!!.cpuTemp
+        val ramUsageTextView: TextView = binding!!.ramUsage
+        val storageUsageTextView: TextView = binding!!.storageUsage
+        val cpuClockTextView: TextView = binding!!.cpuClock
+        val cpuVoltageTextView: TextView = binding!!.cpuVoltage
+        val gpuClockTextView: TextView = binding!!.gpuClock
+        val gpuTempTextView: TextView = binding!!.gpuTemp
+        val modelTextView: TextView = binding!!.model
 
         val modelListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {

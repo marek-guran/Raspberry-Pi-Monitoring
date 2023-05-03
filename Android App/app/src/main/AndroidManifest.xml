@@ -17,8 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RaspberryPi"
         tools:targetApi="33"
-        android:enableOnBackInvokedCallback="true"
-        android:configChanges="uiMode">
+        android:enableOnBackInvokedCallback="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
