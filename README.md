@@ -45,8 +45,6 @@ Warning: Model of your Raspberry Pi device in python program willl work only if 
 4. Reboot Raspberry Pi by ```sudo reboot```
 5. Check if it works (it should create management node in your firebase database if you dont have it). If it did not work check errors by nano management.log
 
-##### Reminder: Android app with these changes is not yet complete.
-
 # Current state images
 For now the color scheme and design choice is... well not the best choice but works for now 😅
 <details> 
